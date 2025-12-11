@@ -1,18 +1,16 @@
-/* details.css - Estilo da Página de Detalhes */
 
-/* --- BOTÃO VOLTAR --- */
 .btn-back {
     display: inline-flex;
     align-items: center;
     margin: 20px;
     padding: 12px 25px;
-    background-color: #fca311; /* Laranja destaque */
+    background-color: #fca311; 
     color: #121212;
     text-decoration: none;
     border-radius: 50px;
     font-weight: bold;
     font-size: 1rem;
-    /* box-shadow: 0 4px 15px rgba(252, 163, 17, 0.4); */
+    box-shadow: 0 4px 15px rgba(252, 163, 17, 0.4);
     transition: transform 0.2s, background-color 0.2s;
     z-index: 100;
     position: relative;
@@ -26,12 +24,12 @@
 /* --- CONTAINER PRINCIPAL (Efeito Vidro) --- */
 .movie-container {
     max-width: 1100px;
-    margin: 20px auto 50px; /* Margem: Cima, Lados, Baixo */
+    margin: 20px auto 50px; 
     padding: 3rem;
     
     /* Efeito de Vidro Escuro */
-    background: rgba(30, 30, 40, 0.85); 
-    backdrop-filter: blur(10px); /* Desfoque do fundo */
+    background: rgba(16, 16, 51, 0.85); 
+    backdrop-filter: blur(8px); 
     -webkit-backdrop-filter: blur(10px);
     
     border-radius: 20px;
@@ -47,7 +45,7 @@
 
 /* --- POSTER (IMAGEM) --- */
 .movie-poster {
-    flex-shrink: 0; /* Não deixa a imagem esmagar */
+    flex-shrink: 0; 
     position: relative;
 }
 
@@ -78,7 +76,7 @@
 .tagline {
     font-size: 1.2rem;
     font-style: italic;
-    color: #a8a8b3; /* Cinza claro */
+    color: #a8a8b3; 
     margin-bottom: 1.5rem;
 }
 
