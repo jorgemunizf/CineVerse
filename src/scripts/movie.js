@@ -2,7 +2,6 @@ const urlParams = new URLSearchParams(window.location.search);
 const movieId = urlParams.get("id");
 const movieContent = document.getElementById("movie-content");
 
-// Verificação inicial rápida
 if (!movieId) {
   alert("ERRO: Sem ID na URL!");
 }
@@ -36,14 +35,11 @@ function renderDetails(movie, providers) {
   console.log("Iniciando renderização...", movie);
 
   try {
-    // DEFINE O BACKGROUND
     if (movie.backdrop_path) {
       document.body.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url('${CONFIG.img_base_url}${movie.backdrop_path}')`;
       document.body.style.backgroundSize = "cover";
       document.body.style.backgroundPosition = "center";
     }
-
-    // PREPARA OS DADOS (Com proteção extra)
 
     // Gêneros
     let genresHtml = "Sem gênero";
@@ -75,7 +71,6 @@ function renderDetails(movie, providers) {
 
     console.log("Dados preparados. Criando HTML...");
 
-    // INSERE NO HTML
     movieContent.innerHTML = `
             <div class="movie-poster">
                 <img src="${
@@ -106,7 +101,6 @@ function renderDetails(movie, providers) {
         `;
   } catch (renderError) {
     console.error("ERRO NA RENDERIZAÇÃO:", renderError);
-    // Isso vai mostrar o erro exato na tela
     movieContent.innerHTML = `<h2 style="color:red">Erro visual: ${renderError.message}</h2>`;
   }
 }
