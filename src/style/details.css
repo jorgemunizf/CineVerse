@@ -1,0 +1,200 @@
+/* details.css - Estilo da Página de Detalhes */
+
+/* --- BOTÃO VOLTAR --- */
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    margin: 20px;
+    padding: 12px 25px;
+    background-color: #fca311; /* Laranja destaque */
+    color: #121212;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1rem;
+    /* box-shadow: 0 4px 15px rgba(252, 163, 17, 0.4); */
+    transition: transform 0.2s, background-color 0.2s;
+    z-index: 100;
+    position: relative;
+}
+
+.btn-back:hover {
+    background-color: #e0920f;
+    transform: translateY(-3px);
+}
+
+/* --- CONTAINER PRINCIPAL (Efeito Vidro) --- */
+.movie-container {
+    max-width: 1100px;
+    margin: 20px auto 50px; /* Margem: Cima, Lados, Baixo */
+    padding: 3rem;
+    
+    /* Efeito de Vidro Escuro */
+    background: rgba(30, 30, 40, 0.85); 
+    backdrop-filter: blur(10px); /* Desfoque do fundo */
+    -webkit-backdrop-filter: blur(10px);
+    
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+    animation: slideUp 0.6s ease-out;
+    color: #fff;
+}
+
+/* --- POSTER (IMAGEM) --- */
+.movie-poster {
+    flex-shrink: 0; /* Não deixa a imagem esmagar */
+    position: relative;
+}
+
+.movie-poster img {
+    width: 320px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: transform 0.3s;
+}
+
+.movie-poster img:hover {
+    transform: scale(1.02);
+}
+
+/* --- DETALHES (TEXTO) --- */
+.movie-details {
+    flex: 1;
+}
+
+.movie-details h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.1;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.tagline {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #a8a8b3; /* Cinza claro */
+    margin-bottom: 1.5rem;
+}
+
+/* --- GÊNEROS (TAGS) --- */
+.genres {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.genres span {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: background 0.3s;
+}
+
+.genres span:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* --- SINOPSE --- */
+.movie-details h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #fca311;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+.movie-details p {
+    line-height: 1.8;
+    color: #e1e1e6;
+    font-size: 1.05rem;
+}
+
+/* --- ONDE ASSISTIR (STREAMING) --- */
+.providers {
+    margin-top: 30px;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 4px solid #fca311;
+}
+
+.providers-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.provider-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.provider-logo:hover {
+    transform: scale(1.1) translateY(-5px);
+}
+
+/* --- RODAPÉ (Nota e Data) --- */
+.meta-info {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    gap: 30px;
+    font-size: 1.1rem;
+}
+
+/* --- ANIMAÇÃO DE ENTRADA --- */
+@keyframes slideUp {
+    from { 
+        opacity: 0; 
+        transform: translateY(40px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+/* --- RESPONSIVIDADE (CELULAR) --- */
+@media (max-width: 850px) {
+    .movie-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+        margin: 1rem;
+        width: auto;
+    }
+
+    .movie-poster img {
+        width: 100%;
+        max-width: 250px;
+        margin-bottom: 20px;
+    }
+
+    .movie-details {
+        text-align: center;
+    }
+
+    .genres, .providers-list, .meta-info {
+        justify-content: center;
+    }
+    
+    .movie-details h1 {
+        font-size: 2rem;
+    }
+}

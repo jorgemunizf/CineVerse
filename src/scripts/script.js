@@ -41,13 +41,15 @@ const showMovies = (movie) => {
     movieElement.classList.add("movie");
 
     movieElement.innerHTML = `
-    <img src = "${CONFIG.img_base_url + poster_path}" alt="${title}">
-    <div class="movie-info">
-    <h3>${title}</h3>
-    <span class="${getClassByRate(vote_average)}">
-    ${vote_average}
-    </span>
-    </div>
+    <a href="movie.html?id=${movie.id}">
+        <img src = "${CONFIG.img_base_url + poster_path}" alt="${title}">
+        <div class="movie-info">
+            <h3>${title}</h3>
+            <span class="${getClassByRate(vote_average)}">
+            ${vote_average}
+            </span>
+        </div>
+    </a>
     `;
 
     main.appendChild(movieElement);
