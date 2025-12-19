@@ -47,6 +47,7 @@ img{
 
 main{
     display: grid;
+    
 
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 2rem;
@@ -62,6 +63,11 @@ main a {
     background-color: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(5px);
     padding: 1.5rem;
+    font-size: 0.9rem;
+
+    max-height: 60%;
+    overflow-y: auto;
+
     position: absolute;
     left: 0;
     bottom: 0;
@@ -71,9 +77,14 @@ main a {
     transition: tranform 0.3s ease-in-out;
     color: var(--white);
 
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2);
+    
+    
     display: -webkit-box;
-    line-clamp: 4;
-    -webkit-line-clamp: 4;
+    line-clamp: 6;
+    -webkit-line-clamp: 6;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -81,8 +92,10 @@ main a {
 
 .overview h3 {
     margin-top: 0;
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #4cfe00;
 }
 
 .movie:hover .overview {
@@ -95,6 +108,8 @@ main a {
     overflow: hidden;
     position: relative;
     transition: transform 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
 }
 
 .movie:hover {

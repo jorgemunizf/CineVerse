@@ -1,4 +1,5 @@
-const API_URL = `${CONFIG.api_base_url}/discover/movie?sort_by=popularity.desc&api_key=${CONFIG.API_KEY}&language=pt-BR`;
+// const API_URL = `${CONFIG.api_base_url}/discover/movie?sort_by=popularity.desc&api_key=${CONFIG.API_KEY}&language=pt-BR`;
+const API_URL = `${CONFIG.api_base_url}/discover/movie?api_key=${CONFIG.API_KEY}&language=pt-BR&sort_by=popularity.desc&watch_region=BR&with_watch_monetization_types=flatrate`;
 const SEARCH_API = `${CONFIG.api_base_url}/search/movie?api_key=${CONFIG.API_KEY}&language=pt-BR&query=`;
 
 const main = document.getElementById("main");
