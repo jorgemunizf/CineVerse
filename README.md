@@ -60,3 +60,14 @@ Você precisará de uma chave de API do [TMDB](https://www.themoviedb.org/docume
    ```bash
    git clone https://github.com/SEU-USUARIO/cineverse.git
    ```
+
+2. **Configure a API:**
+   Crie um arquivo chamado src/scripts/config.js e adicione sua chave:
+   ```bash
+   const CONFIG = {
+    API_KEY: 'SUA_CHAVE_AQUI',
+    api_base_url: 'https://api.themoviedb.org/3',
+    img_base_url: 'https://image.tmdb.org/t/p/w1280'
+};
+   ```
+   
