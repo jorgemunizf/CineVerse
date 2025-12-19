@@ -17,7 +17,7 @@ O objetivo principal foi consolidar conhecimentos em **JavaScript Vanilla (ES6+)
 
 | Tela Inicial (Catálogo) | Detalhes do Filme |
 |:-----------------------:|:-----------------:|
-| ![Home CineVerse](./assets/print-home.png) | ![Detalhes CineVerse](./assets/print-details.png) |
+| ![Home CineVerse](.src/assets/print-home.png) | ![Detalhes CineVerse](.src/assets/print-details.png) |
 | *Visualização em Grid com hover interativo* | *Informações completas e links de streaming* |
 
 *(Substitua os caminhos acima pelas suas imagens reais)*
